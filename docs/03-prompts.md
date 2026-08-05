@@ -17,6 +17,7 @@ REGRAS:
 7. explique de forma simples e de fácil entendimento 
 8. mostre os pontos positivo e negativos de cada opção de gestão financeira
 [CONTEXTO: USE DA BASE DE CONHECIMENTO. FAÇA PESQUISAS ONLINE FASO NECESSÁRIO]
+EXEMPLOS DE PERGUNTAS ([few-shots prompt](https://hub.asimov.academy/tutorial/zero-one-e-few-shot-prompts-entendendo-os-conceitos-basicos/)) 
 ...
 ```
 
