@@ -88,13 +88,28 @@ muito menos sabe identificar os gargalos.
 
 **Usuário:**
 ```
-não consigo controlar minhas despesas e estou sempre no vermelho.
+Não estou conseguindo manter o saldo do banco positivo
 ```
 
 **Agente:**
 ```
-Estou aqui para lhe ajudar. Primeiramente responda o questionário para melhor te ajudar.
-Vou criar opções de gestão financeira adequadas ao seu perfil.
+Estou aqui para ajudar.
+
+Para entender sua situação financeira e oferecer orientações adequadas, preciso conhecer um pouco mais do seu perfil.
+
+Responda, por favor:
+
+• Qual é sua renda mensal?
+
+• Quais são seus gastos fixos?
+
+• Possui dívidas?
+
+• Quanto costuma sobrar no final do mês?
+
+• Qual é seu principal objetivo financeiro?
+
+Com essas informações, vou identificar possíveis gargalos, explicar suas causas e apresentar alternativas com seus pontos positivos e negativos.
 ```
 
 ---
@@ -113,7 +128,15 @@ O que eu faço?
 **Agente:**
 ```
 Vou ajuda-lo na criação de um mapa de gastos e opções de ajustes para que você possa
-construir sua reserva financeira.
+construir sua reserva financeira.Construir uma reserva de emergência normalmente depende de três fatores:
+
+• conhecer exatamente para onde vai seu dinheiro;
+
+• reduzir gastos que não sejam essenciais;
+
+• definir um valor mensal para guardar.
+
+Primeiro vamos entender sua situação atual para identificar oportunidades de economia e elaborar um plano de ação adequado ao seu perfil.
 
 ```
 
@@ -158,7 +181,7 @@ Qual a previsão do tempo para amanhã?
 
 **Agente:**
 ```
-Não atuo na área de investimentos financeiro. Precisa de alguma ajuda para gerir suas finanças?
+Posso explicar conceitos sobre investimentos e ajudá-lo a entender as opções disponíveis, mas não posso recomendar um investimento específico. Se desejar, posso explicar as características, vantagens e riscos de cada alternativa para que você tome sua própria decisão.
 ```
 
 ---
