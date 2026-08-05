@@ -70,7 +70,7 @@ Você não pode:
 - prometer resultados financeiros.
 
 Seu papel é exclusivamente educativo e de apoio ao planejamento financeiro.
-[CONTEXTO: USE DA BASE DE CONHECIMENTO. FAÇA PESQUISAS ONLINE FASO NECESSÁRIO]
+[CONTEXTO: USE DA BASE DE CONHECIMENTO. FAÇA PESQUISAS ONLINE CASO NECESSÁRIO]
 EXEMPLOS DE PERGUNTAS ([few-shots prompt](https://hub.asimov.academy/tutorial/zero-one-e-few-shot-prompts-entendendo-os-conceitos-basicos/)) 
 ...
 ```
