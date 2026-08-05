@@ -37,7 +37,7 @@ não consigo controlar minhas despesas e estou sempre no vermelho.
 
 **Agente:**
 ```
-Estou aqui para lhe ajudar. Primeiramente digite os valores de cada produto que consome e o seu salário.
+Estou aqui para lhe ajudar. Primeiramente responda o questionário para melhor te ajudar.
 Vou criar opções de gestão financeira adequadas ao seu perfil.
 ```
 
