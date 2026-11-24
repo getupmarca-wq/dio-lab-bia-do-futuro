@@ -1,44 +1,75 @@
-# Pitch (3 minutos)
 
-> [!TIP]
-> Você pode usar alguns slides pra apoiar no seu Pitch e mostrar sua solução na prática.
- 
-## Roteiro Sugerido
 
-### 1. O Problema (30 seg)
-> Qual dor do cliente você resolve?
+# Pitch — BIA do Futuro (3 minutos)
 
-[identificar gargalos nas gestão financeira de cada cliente, adaptar estratégias de acordo com as necessidades do mesmo, conduzindo-o ao melhor modelo financeiro possível.]
+## 1. O Problema (30 segundos)
 
-### 2. A Solução (1 min)
-> Como seu agente resolve esse problema?
+A organização financeira pessoal ainda é um desafio para muitas pessoas. A falta de controle sobre receitas, despesas e hábitos de consumo dificulta a identificação de problemas financeiros e a tomada de decisões conscientes.
 
-[Mapeando as principais dificuldades do cliente, onde os gastos estão sendo empregados, meios de otimiza-los]
+Muitas pessoas não sabem exatamente para onde seu dinheiro está indo ou quais despesas poderiam ser reduzidas.
 
-### 3. Demonstração (1 min)
-> Mostre o agente funcionando (pode ser gravação de tela)
+A BIA do Futuro surge como uma proposta para tornar a análise financeira mais acessível, organizada e compreensível.
 
-[um chat onde o cliente pode digitar seus gastos, sena necessidade de tirar foto de boleto, só o valor de forma manual mesmo, através do qual será produzido uma análise e será relatado ao cliente um gráfico de gastos, possibilitando os ajustes necessários para a criação de um modelo financeiro personalizado]
+## 2. A Solução (1 minuto)
 
-### 4. Diferencial e Impacto (30 seg)
-> Por que essa solução é inovadora e qual é o impacto dela na sociedade?
+A BIA do Futuro é um projeto de agente financeiro educativo, desenvolvido para auxiliar na organização e interpretação de informações financeiras pessoais.
 
-[Introduz o passo a passo para ser seguido por qualquer pessoa, formas de melhorias e otimização de gastos]
+A proposta utiliza dados estruturados, como perfil financeiro, transações e informações sobre produtos financeiros, para construir análises e orientações educativas.
+
+Entre seus objetivos estão:
+
+- Organizar informações sobre receitas e despesas.
+- Identificar situações de déficit ou superávit.
+- Facilitar a compreensão dos hábitos de consumo.
+- Apresentar possibilidades de melhoria na organização financeira.
+- Orientar o usuário com informações claras e responsáveis.
+
+A solução foi estruturada com uma base de conhecimento e instruções específicas para orientar o comportamento do agente, incluindo limites de atuação e cuidados com informações pessoais.
+
+## 3. Demonstração do Projeto (1 minuto)
+
+Durante a demonstração, serão apresentados os principais componentes desenvolvidos:
+
+1. **Repositório GitHub:** apresentação da estrutura e organização do projeto.
+2. **Base de conhecimento:** demonstração dos arquivos JSON, CSV e SQL utilizados como referências de dados.
+3. **Engenharia de prompts:** apresentação das instruções que definem a identidade, as responsabilidades e os limites da BIA.
+4. **Cenários de avaliação:** exemplos de situações financeiras utilizadas para planejar a avaliação das respostas do agente.
+
+A demonstração deve mostrar o que já está documentado e implementado, diferenciando essas entregas das funcionalidades que ainda representam possibilidades de evolução.
+
+## 4. Diferencial e Impacto (30 segundos)
+
+O principal diferencial da BIA do Futuro é unir organização financeira, estruturação de dados e inteligência artificial em uma proposta voltada à educação financeira.
+
+O projeto busca transformar informações financeiras em orientações mais fáceis de compreender, incentivando hábitos conscientes e decisões responsáveis.
+
+Além disso, foi planejado para respeitar limites importantes: não substituir profissionais financeiros, não garantir resultados de investimentos e não realizar operações bancárias.
+
+A intenção é contribuir para que mais pessoas compreendam sua própria situação financeira e tenham melhores condições de organizar seus recursos.
 
 ---
 
 ## Checklist do Pitch
 
-- [ ] Duração máxima de 3 minutos
-- [ ] Problema claramente definido
-- [ ] Solução demonstrada na prática
-- [ ] Diferencial explicado
-- [ ] Áudio e vídeo com boa qualidade
-
----
+- [ ] Duração máxima de 3 minutos.
+- [ ] Problema claramente apresentado.
+- [ ] Objetivo da BIA explicado.
+- [ ] Estrutura do projeto demonstrada.
+- [ ] Base de conhecimento apresentada.
+- [ ] Engenharia de prompts demonstrada.
+- [ ] Diferenciais e limitações explicados.
+- [ ] Áudio e vídeo com boa qualidade.
 
 ## Link do Vídeo
 
-> Cole aqui o link do seu pitch (YouTube, Loom, Google Drive, etc.)
+Cole aqui o link do vídeo de apresentação (YouTube, Loom ou Google Drive).
 
-[Link do vídeo]
+**Link:** [Adicionar link após publicar o vídeo]
+
+---
+
+## Observação sobre o estágio do projeto
+
+A apresentação deve distinguir a estrutura já desenvolvida das funcionalidades futuras.
+
+Não afirmar que existe integração operacional com um modelo de linguagem
