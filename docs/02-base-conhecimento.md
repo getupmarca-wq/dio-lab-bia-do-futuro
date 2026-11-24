@@ -6,10 +6,10 @@ Descreva se usou os arquivos da pasta `data`, por exemplo:
 
 | Arquivo | Formato | Utilização no Agente |
 |---------|---------|---------------------|
-| `historico_atendimento.csv` | CSV | Contextualizar interações anteriores para ser mais eficiente no atendimento |
-| `perfil_investidor.json` | JSON | Personalizar recomendações, atribuindo as melhores opções de solução financeira  |
-| `transacoes.csv` | CSV | Analisar padrão de gastos do cliente, identificar gargalos e gerar opções de melhoria para ele busque resolver |
-|`exemplo-de-gastos.SQL`| SQL | Utilize como exemplos de gastos, para possíveis análises |
+| `historico_atendimento.csv` | CSV | Contextualizar interações anteriores para ser mais eficiente no atendimento, referência. |
+| `perfil_investidor.json` | JSON | Personalizar recomendações, atribuindo as melhores opções de solução financeira. Explique o uso explicativo no perfil  |
+| `transacoes.csv` | CSV | Analisar padrão de gastos do cliente, identificar gargalos e gerar opções de melhoria para ele busque resolver, arquivos lidos |
+|`exemplo-de-gastos.SQL`| SQL | Utilize como exemplos de gastos, para possíveis análises, não há execução automática de SQL |
 
 
 ---
@@ -32,13 +32,13 @@ Os JSON/CSV/SQL são carregados no início da sessão e incluídos no contexto d
 ### Como os dados são usados no prompt?
 > Os dados vão no system prompt? São consultados dinamicamente?
 
-sim, a título de exemplo.
+sim, a título de exemplo. Os dados, a princípio, são retirado de um banco de dados público, a nível de exemplo. são separados e retirados só o que o cliente deseja.
 
 ---
 
 ## Exemplo de Contexto Montado
 
-> Mostre um exemplo de como os dados são formatados para o agente.
+> Mostre um exemplo de como os dados são formatados para o agente. Os dados a seguir são fictícios, utilize apenas a título educacional.
 
 ```
 Dados do Cliente:
