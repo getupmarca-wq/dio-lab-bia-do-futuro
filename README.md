@@ -1,313 +1,130 @@
-# 💰 Agente de Gestão Financeira Pessoal
+# 💰 BIA do Futuro — Agente de Gestão Financeira Pessoal
 
-## Projeto de conclusão — Bootcamp Bradesco | DIO
+**Projeto de conclusão do Bootcamp Bradesco | DIO**
 
-Este projeto apresenta um **agente educativo de gestão financeira pessoal**, desenvolvido em Python, que utiliza uma base de dados local para analisar informações financeiras e apresentar alternativas de organização.
+A **BIA do Futuro** é um projeto educacional de gestão financeira pessoal desenvolvido em Python. Sua proposta é utilizar dados financeiros estruturados e regras de negócio para facilitar a compreensão de receitas, despesas, saldo e organização financeira.
 
-A proposta não é substituir um profissional financeiro. O objetivo é **transformar dados financeiros em informações simples para ajudar o usuário a compreender sua própria situação e tomar decisões conscientes**.
+O projeto busca demonstrar como programação, análise de dados e engenharia de prompts podem ser aplicadas a um problema cotidiano.
 
----
-
-# 1. 🎯 Objetivo do projeto
-
-O agente foi criado para responder perguntas relacionadas à organização financeira pessoal.
-
-Ele pode ajudar a:
-
-- visualizar receitas e despesas;
-- calcular o saldo financeiro;
-- identificar se o período apresenta superávit ou déficit;
-- analisar despesas por categoria;
-- acompanhar a reserva de emergência;
-- comparar modelos de gestão financeira;
-- apresentar pontos fortes e fracos de cada alternativa;
-- explicar conceitos financeiros de forma simples;
-- utilizar os dados existentes na base para gerar uma análise.
-
-### Princípio principal
-
-> O agente não decide pelo usuário. Ele apresenta informações e alternativas para fins educativos.
+> **Objetivo:** transformar informações financeiras em análises claras e orientações educativas, sem substituir profissionais financeiros ou tomar decisões pelo usuário.
 
 ---
 
-# 2. 🧠 Como funciona
+## 🎯 1. Problema e solução
 
-O funcionamento pode ser entendido em cinco etapas:
+A falta de organização financeira dificulta o acompanhamento dos gastos, a identificação de desequilíbrios e o planejamento de objetivos.
 
-```text
-                BASE DE DADOS
-                     │
-                     ▼
-        ┌─────────────────────────┐
-        │ Validação dos arquivos  │
-        └────────────┬────────────┘
-                     │
-                     ▼
-        ┌─────────────────────────┐
-        │ Leitura dos dados       │
-        │ JSON / CSV / SQL        │
-        └────────────┬────────────┘
-                     │
-                     ▼
-        ┌─────────────────────────┐
-        │ Análise financeira      │
-        │ receitas / despesas     │
-        │ saldo / reserva         │
-        └────────────┬────────────┘
-                     │
-                     ▼
-        ┌─────────────────────────┐
-        │ Agente educativo        │
-        │ perguntas / alternativas│
-        └────────────┬────────────┘
-                     │
-                     ▼
-              RESPOSTA AO USUÁRIO
+A BIA do Futuro foi idealizada para auxiliar nesse processo por meio da organização e interpretação de informações financeiras.
+
+### Objetivos do projeto
+
+- Organizar informações sobre receitas e despesas.
+- Calcular o saldo de um período.
+- Identificar situações de déficit, superávit ou equilíbrio.
+- Analisar despesas por categoria.
+- Acompanhar informações sobre reserva financeira.
+- Apresentar modelos de organização do orçamento.
+- Explicar conceitos financeiros de maneira acessível.
+
+### Princípio de funcionamento
+
+A BIA apresenta informações e alternativas para fins educativos. A decisão final permanece sempre com o usuário.
+
+---
+
+## 🧠 2. Proposta de funcionamento
+
+A solução foi organizada para trabalhar com dados estruturados, regras de negócio e instruções que orientam o comportamento do agente.
+
+### Fluxo conceitual
+
+```mermaid
+flowchart TD
+    A[Dados financeiros] --> B[Leitura e validação]
+    B --> C[Organização dos dados]
+    C --> D[Cálculos e regras financeiras]
+    D --> E[Interpretação educativa]
+    E --> F[Apresentação das informações]
 ```
 
-O usuário faz uma pergunta.
-
-O programa verifica se o assunto está relacionado a finanças. Em seguida, utiliza a base de dados e os cálculos realizados pelo Python para apresentar uma resposta.
+O fluxo representa a arquitetura proposta para o projeto. A execução de cada etapa deve ser conferida no código-fonte.
 
 ---
 
-# 3. 📁 Estrutura do projeto
+## 📁 3. Estrutura do projeto
 
 ```text
-agente-gestao-financeira-dio/
+dio-lab-bia-do-futuro/
 │
 ├── main.py
-│
 ├── README.md
 ├── requirements.txt
 ├── LICENSE
 ├── .gitignore
 │
-└── data/
-    ├── perfil_investidor.json
-    ├── produtos_financeiros.json
-    ├── transacoes.csv
-    ├── historico_atendimento.csv
-    └── exemplos-de-gastos.sql
+├── data/
+│   ├── perfil_investidor.json
+│   ├── produtos_financeiros.json
+│   ├── transacoes.csv
+│   ├── historico_atendimento.csv
+│   └── exemplos-de-gastos.sql
+│
+└── docs/
+    ├── 01-documentacao-agente.md
+    ├── 02-base-conhecimento.md
+    ├── 03-prompts.md
+    ├── 04-metricas.md
+    └── 05-pitch.md
 ```
 
-## `main.py`
+### Organização dos dados
 
-É o arquivo principal da aplicação.
+| Arquivo | Finalidade |
+|---|---|
+| `perfil_investidor.json` | Informações de perfil e objetivos financeiros utilizados na demonstração |
+| `produtos_financeiros.json` | Dados de produtos financeiros para comparação educativa |
+| `transacoes.csv` | Registros de movimentações financeiras |
+| `historico_atendimento.csv` | Exemplos de registros de atendimento |
+| `exemplos-de-gastos.sql` | Material de referência sobre estruturação de dados em SQL |
 
-Nele estão:
-
-- carregamento da base;
-- validação dos dados;
-- cálculos financeiros;
-- regras do agente;
-- modelos de gestão financeira;
-- processamento das perguntas;
-- execução do programa.
-
-## `data/`
-
-É a pasta que contém a base usada pelo projeto.
-
-### `perfil_investidor.json`
-
-Contém informações do perfil utilizado na demonstração, como:
-
-- nome;
-- idade;
-- perfil;
-- objetivo;
-- renda;
-- patrimônio;
-- reserva;
-- metas.
-
-### `transacoes.csv`
-
-Contém as movimentações utilizadas nos cálculos.
-
-O programa utiliza essas informações para calcular receitas, despesas e saldo.
-
-### `historico_atendimento.csv`
-
-Contém registros de atendimentos anteriores utilizados como parte da base do projeto.
-
-### `produtos_financeiros.json`
-
-Contém produtos financeiros usados para comparação educativa.
-
-O projeto não transforma automaticamente esses produtos em recomendação de investimento.
-
-### `exemplos-de-gastos.sql`
-
-Arquivo SQL mantido como material de referência da base.
-
-Por segurança, o programa não executa comandos SQL automaticamente.
+**Observação:** o arquivo SQL é apresentado como referência. Sua presença não significa que exista um banco de dados relacional integrado à aplicação.
 
 ---
 
-# 4. 🔐 Segurança e confiabilidade
+## 🛠️ 4. Tecnologias e conceitos
 
-Uma das principais preocupações do projeto é evitar respostas financeiras inventadas ou apresentadas como fatos quando não estão confirmadas.
+O projeto reúne conceitos e recursos relacionados a:
 
-O código possui algumas regras para isso.
-
-## 4.1 Não inventar informações
-
-Quando o dado necessário não está disponível na base, o programa deve informar que não possui dados suficientes.
-
-Exemplo:
-
-```text
-Não há dados suficientes para calcular a meta da reserva.
-```
-
-Isso é preferível a criar um número que não existe na base.
+- **Python:** linguagem utilizada no desenvolvimento.
+- **Pandas:** biblioteca para análise e manipulação de dados, conforme utilização no código.
+- **JSON:** estruturação de informações.
+- **CSV:** armazenamento de registros tabulares.
+- **SQL:** referência para organização de dados relacionais.
+- **Engenharia de prompts:** definição de instruções, comportamento e limites do agente.
+- **Regras de negócio:** organização dos critérios de análise financeira.
 
 ---
 
-## 4.2 Cálculos feitos pelo programa
+## 📊 5. Indicadores financeiros
 
-Informações quantitativas importantes são calculadas pelo Python.
+Entre os indicadores previstos na proposta estão:
 
-Por exemplo:
+| Indicador | Descrição |
+|---|---|
+| Receitas | Soma das entradas financeiras do período |
+| Despesas | Soma das saídas financeiras do período |
+| Saldo | Diferença entre receitas e despesas |
+| Situação financeira | Classificação do resultado do período |
+| Taxa de poupança | Relação entre o saldo positivo e as receitas |
+| Reserva financeira | Comparação entre valor atual e meta definida |
 
-```text
+### Regra básica de cálculo
+
+```python
 saldo = receitas - despesas
 ```
 
-Assim, o agente não precisa "imaginar" qual é o saldo.
-
----
-
-## 4.3 Não prometer ganhos
-
-O agente não promete:
-
-- lucro;
-- rentabilidade;
-- retorno garantido;
-- enriquecimento;
-- resultado financeiro futuro.
-
----
-
-## 4.4 Investimentos
-
-Quando o usuário pergunta sobre investimentos, o projeto apresenta informações educativas.
-
-O agente não deve dizer:
-
-```text
-"Este é o melhor investimento para você."
-```
-
-Em vez disso, deve explicar características e permitir que o usuário compare alternativas.
-
----
-
-# 5. 📊 Modelos de gestão financeira
-
-O projeto apresenta diferentes modelos de organização financeira.
-
-Eles não são classificados como "melhor" ou "pior".
-
-Cada alternativa possui:
-
-- descrição;
-- pontos fortes;
-- pontos fracos.
-
-Atualmente são apresentados exemplos como:
-
-### Orçamento por percentuais
-
-Distribui a renda entre categorias usando limites ou percentuais.
-
-**Pontos fortes:**
-
-- simples de entender;
-- facilita o acompanhamento;
-- ajuda a estabelecer limites.
-
-**Pontos fracos:**
-
-- os percentuais podem não funcionar para todas as pessoas;
-- despesas extraordinárias podem dificultar o planejamento.
-
----
-
-### Orçamento Base Zero
-
-A renda recebe uma finalidade dentro do planejamento.
-
-**Pontos fortes:**
-
-- permite acompanhar melhor o destino do dinheiro;
-- pode revelar despesas não planejadas.
-
-**Pontos fracos:**
-
-- exige mais acompanhamento;
-- pode consumir mais tempo.
-
----
-
-### Método dos Envelopes
-
-O orçamento é dividido por categorias com limites definidos.
-
-**Pontos fortes:**
-
-- deixa os limites mais claros;
-- pode ajudar no controle dos gastos.
-
-**Pontos fracos:**
-
-- exige disciplina;
-- pode ser menos conveniente para gastos muito variáveis.
-
----
-
-### Pague-se Primeiro
-
-Uma parcela da renda é separada para objetivos financeiros antes da distribuição do restante.
-
-**Pontos fortes:**
-
-- pode facilitar a criação de uma reserva;
-- coloca os objetivos financeiros no planejamento.
-
-**Pontos fracos:**
-
-- pode pressionar o orçamento quando a renda já está comprometida;
-- não substitui o controle das despesas.
-
----
-
-# 6. 📈 Indicadores calculados
-
-O sistema calcula alguns indicadores básicos.
-
-## Receitas
-
-Representa a soma das entradas encontradas na base de transações.
-
-## Despesas
-
-Representa a soma das saídas encontradas na base.
-
-## Saldo
-
-Calculado por:
-
-```text
-Saldo = Receitas - Despesas
-```
-
-## Situação financeira do período
-
-O resultado é classificado como:
+### Classificação do resultado
 
 ```text
 Saldo > 0  → SUPERÁVIT
@@ -315,260 +132,197 @@ Saldo < 0  → DÉFICIT
 Saldo = 0  → EQUILÍBRIO
 ```
 
-Essa classificação representa **somente o período existente na base de transações**.
+Esses indicadores devem ser interpretados considerando o período analisado e a qualidade dos dados disponíveis.
 
 ---
 
-# 7. 🧮 Exemplo de análise
+## 🔐 6. Segurança e responsabilidade
 
-Com os dados de demonstração do projeto, o programa pode apresentar informações como:
+A confiabilidade das informações é um dos princípios do projeto.
 
-```text
-Renda mensal:       R$ 5.000,00
-Receitas:           R$ 5.000,00
-Despesas:           R$ 2.488,90
-Saldo:              R$ 2.511,10
+As orientações documentadas para o agente incluem:
 
-Situação:           SUPERÁVIT
-Taxa de poupança:   50,22%
+- Não inventar informações ausentes na base.
+- Diferenciar dados disponíveis de hipóteses.
+- Utilizar cálculos verificáveis para informações quantitativas.
+- Não prometer ganhos ou rentabilidade.
+- Não apresentar produtos financeiros como recomendações individuais de investimento.
+- Preservar informações pessoais e financeiras.
+- Orientar o usuário a procurar os canais oficiais da instituição quando houver problemas bancários.
 
-Reserva atual:      R$ 10.000,00
-Meta:               R$ 15.000,00
-Diferença:          R$ 5.000,00
-Progresso:          66,67%
-```
-
-### Interpretação educativa
-
-O cálculo indica que, no período analisado, as receitas foram superiores às despesas.
-
-Isso **não significa automaticamente que a situação financeira esteja perfeita**.
-
-Ainda é necessário observar:
-
-- composição das despesas;
-- dívidas;
-- objetivos;
-- estabilidade da renda;
-- necessidade de liquidez;
-- capacidade de manter o comportamento financeiro.
-
-Essa diferença entre **dado calculado** e **interpretação** é importante para evitar conclusões exageradas.
+A BIA possui finalidade educativa e não deve executar operações bancárias, transferências ou movimentações financeiras.
 
 ---
 
-# 8. 💬 Exemplos de perguntas
+## 💡 7. Modelos de organização financeira
 
-Depois de executar o programa, o usuário pode testar:
+O projeto aborda diferentes métodos de organização do orçamento.
 
-```text
-Qual é minha situação financeira?
-```
+### Orçamento por percentuais
 
-```text
-Como está minha reserva?
-```
+Divide a renda entre categorias de despesas e objetivos.
 
-```text
-Quais modelos de gestão financeira existem?
-```
+**Vantagens:** simplicidade e facilidade de acompanhamento.
 
-```text
-Quero organizar minhas finanças.
-```
+**Limitações:** percentuais fixos podem não atender a todas as realidades financeiras.
 
-```text
-Quero investir meu dinheiro.
-```
+### Orçamento Base Zero
+
+Atribui uma finalidade para cada parte da renda disponível.
+
+**Vantagens:** maior visibilidade sobre a destinação do dinheiro.
+
+**Limitações:** exige acompanhamento frequente.
+
+### Método dos Envelopes
+
+Estabelece limites de gastos para diferentes categorias.
+
+**Vantagens:** facilita o controle dos limites definidos.
+
+**Limitações:** exige disciplina e atualização dos valores.
+
+### Pague-se Primeiro
+
+Prioriza a separação de recursos para objetivos financeiros antes da distribuição do restante da renda.
+
+**Vantagens:** incentiva o planejamento de metas e a formação de reserva.
+
+**Limitações:** precisa considerar as despesas essenciais e os compromissos existentes.
 
 ---
 
-# 9. ▶️ Como executar
+## 🧪 8. Avaliação e testes
 
-## Pré-requisito
+A avaliação do projeto foi estruturada para observar a qualidade das análises e o comportamento esperado do agente.
 
-Python 3.10 ou superior.
+Entre os critérios definidos estão:
 
-## Instalar dependências
+- Precisão dos cálculos.
+- Coerência das respostas.
+- Clareza das explicações.
+- Segurança no tratamento de informações.
+- Tratamento de dados ausentes ou inconsistentes.
+- Respeito aos limites de atuação.
 
-No terminal:
+Os cenários e critérios de avaliação estão documentados em:
+
+[`docs/04-metricas.md`](docs/04-metricas.md)
+
+Os resultados devem ser preenchidos após a execução dos testes. Cenários planejados não devem ser apresentados como testes aprovados.
+
+---
+
+## ▶️ 9. Como executar
+
+### Pré-requisitos
+
+- Python 3.10 ou superior.
+- Git, caso queira clonar o repositório.
+
+### Clonar o projeto
+
+```bash
+git clone https://github.com/getupmarca-wq/dio-lab-bia-do-futuro.git
+```
+
+### Entrar na pasta
+
+```bash
+cd dio-lab-bia-do-futuro
+```
+
+### Instalar dependências
 
 ```bash
 pip install -r requirements.txt
 ```
 
-## Executar
+### Executar
 
 ```bash
 python main.py
 ```
 
-O programa deverá apresentar:
-
-```text
-AGENTE DE GESTÃO FINANCEIRA PESSOAL
-Projeto de conclusão — Bootcamp DIO / Bradesco
-```
-
-Depois disso, basta digitar uma pergunta.
-
-Para encerrar:
-
-```text
-sair
-```
+**Importante:** os comandos acima correspondem ao procedimento documentado. Antes de publicar a versão definitiva, confirme se os arquivos e dependências estão presentes e se a execução funciona em um ambiente limpo.
 
 ---
 
-# 10. 🗂️ Por que não usar o caminho `C:\Users\...`?
+## 🚧 10. Limitações atuais
 
-O projeto originalmente utilizava um caminho específico do computador do desenvolvedor.
+A BIA do Futuro é um projeto educacional em evolução.
 
-Isso cria um problema:
+Conforme o escopo documentado, ainda não estão contemplados:
 
-```text
-C:\Users\edileaceia\Desktop\alan\chat bot\data
-```
+- Interface gráfica de usuário.
+- Autenticação de usuários.
+- Integração com instituições financeiras.
+- API bancária.
+- Banco de dados relacional integrado.
+- Modelo de linguagem conectado à aplicação.
+- Sistema de auditoria em produção.
 
-Esse caminho só existe naquele computador.
-
-Por isso, o projeto foi estruturado para utilizar:
-
-```text
-data/
-```
-
-relativo ao próprio projeto.
-
-O `main.py` identifica automaticamente a pasta em que está localizado e procura os arquivos dentro de:
-
-```text
-projeto/data/
-```
-
-Dessa forma, o projeto pode ser clonado do GitHub em outro computador sem precisar alterar o caminho manualmente.
+A engenharia de prompts e os cenários de avaliação documentados representam a estrutura de comportamento planejada para o agente. Isso não significa, por si só, que exista integração operacional com um modelo de IA.
 
 ---
 
-# 11. 🛡️ Boas práticas para publicar no GitHub
+## 🔮 11. Próximas evoluções
 
-Os arquivos disponibilizados neste projeto devem ser considerados **dados de demonstração**.
+As possibilidades de evolução incluem:
 
-Não publique:
+1. **Interface gráfica:** desenvolver uma experiência de utilização mais acessível.
+2. **Visualização de dados:** criar gráficos de receitas, despesas e evolução da reserva.
+3. **Banco de dados:** substituir arquivos estáticos por uma estrutura persistente.
+4. **Integração com IA generativa:** conectar um modelo de linguagem à base de conhecimento.
+5. **Testes automatizados:** validar cálculos, dados e regras de segurança.
+6. **Avaliação do agente:** executar cenários e registrar resultados mensuráveis.
 
-- senhas;
-- tokens;
-- chaves de API;
-- dados bancários;
-- CPF;
-- informações reais de clientes;
-- documentos pessoais;
-- dados financeiros identificáveis.
-
-Se os dados utilizados no projeto representarem pessoas reais, substitua-os por dados fictícios ou anonimizados antes de tornar o repositório público.
+Cada evolução deverá ser implementada e testada antes de ser apresentada como funcionalidade disponível.
 
 ---
 
-# 12. 🚧 Limitações atuais
+## 🎓 12. Relação com o Bootcamp
 
-Este projeto é um **protótipo educacional**.
+O projeto foi desenvolvido como atividade de conclusão do Bootcamp Bradesco — DIO.
 
-Ele ainda não possui:
+A proposta reúne conhecimentos de programação, estruturação de dados, lógica de negócio e engenharia de prompts, aplicados à organização financeira pessoal.
 
-- interface gráfica;
-- autenticação;
-- banco de dados relacional integrado;
-- API;
-- modelo de linguagem conectado;
-- testes automatizados completos;
-- sistema de auditoria;
-- integração automática com instituições financeiras.
-
-Portanto, ele não deve ser utilizado como sistema financeiro de produção.
+O desenvolvimento também permite explorar como soluções baseadas em dados e inteligência artificial podem contribuir para a compreensão de problemas cotidianos.
 
 ---
 
-# 13. 🔮 Próximas melhorias
+## 📚 13. Documentação complementar
 
-Uma evolução natural do projeto seria adicionar:
+A documentação do projeto está organizada na pasta `docs/`:
 
-### Etapa 1 — Interface
-
-Criar uma interface web para facilitar a utilização.
-
-### Etapa 2 — Gráficos
-
-Apresentar:
-
-- receitas;
-- despesas;
-- categorias;
-- evolução da reserva.
-
-### Etapa 3 — Banco de dados
-
-Substituir arquivos estáticos por uma estrutura de banco de dados.
-
-### Etapa 4 — IA generativa
-
-Integrar um modelo de linguagem ao agente.
-
-Nesse cenário, seria importante manter uma camada de validação para impedir que a IA apresente como fato algo que não esteja confirmado na base.
-
-### Etapa 5 — Testes
-
-Criar testes automatizados para:
-
-- cálculos;
-- carregamento dos arquivos;
-- respostas fora do escopo;
-- regras de segurança;
-- tratamento de dados ausentes.
+| Documento | Conteúdo |
+|---|---|
+| [01 — Documentação do Agente](docs/01-documentacao-agente.md) | Objetivo, identidade e arquitetura |
+| [02 — Base de Conhecimento](docs/02-base-conhecimento.md) | Organização e utilização dos dados |
+| [03 — Prompts](docs/03-prompts.md) | Instruções e comportamento esperado |
+| [04 — Métricas](docs/04-metricas.md) | Critérios e cenários de avaliação |
+| [05 — Pitch](docs/05-pitch.md) | Roteiro de apresentação |
 
 ---
 
-# 14. 🎓 Relação com o Bootcamp
+## ⚠️ 14. Aviso importante
 
-Este projeto demonstra a aplicação prática de conceitos de programação e inteligência artificial em um problema do cotidiano.
+Este projeto possui finalidade exclusivamente educacional.
 
-A solução combina:
+As informações e análises apresentadas não constituem aconselhamento financeiro profissional, recomendação individual de investimento ou promessa de rentabilidade.
 
-```text
-Python
-+
-Pandas
-+
-JSON
-+
-CSV
-+
-SQL como base de referência
-+
-Regras de negócio
-+
-Educação financeira
-```
-
-O principal objetivo não é criar um sistema que "decide pelo usuário", mas demonstrar como uma aplicação pode utilizar dados estruturados para gerar uma análise compreensível e apresentar alternativas de maneira responsável.
+Os dados utilizados devem ser fictícios ou devidamente anonimizados. Não devem ser publicados dados bancários, senhas, documentos pessoais ou informações financeiras identificáveis.
 
 ---
 
-# 15. ⚠️ Aviso
+## 👨‍💻 Autor
 
-Este projeto possui finalidade **educacional**.
+Projeto desenvolvido para o Bootcamp Bradesco — DIO.
 
-As análises apresentadas são baseadas nos dados disponíveis na aplicação e não constituem aconselhamento financeiro profissional, recomendação de investimento ou promessa de resultado.
+**GitHub:** [getupmarca-wq](https://github.com/getupmarca-wq)
 
-O usuário deve analisar sua própria situação e, quando necessário, procurar um profissional habilitado.
+## 📄 Licença
 
----
+Este projeto está disponibilizado sob a licença MIT. Consulte o arquivo [`LICENSE`](LICENSE) para obter os detalhes.
 
-## Autor
 
-Projeto desenvolvido para apresentação no **Bootcamp Bradesco — DIO**.
-
----
-
-## Licença
-
-MIT.
